@@ -24,10 +24,10 @@ jobs:
     - name: Print working directory
       run: pwd
     - name: Restore dependencies
-      run: dotnet restore ../../Backend/FlagExplorerBackend
+      run: dotnet restore ./backend/FlagExplorerBackend/
     - name: Build
       run: dotnet build --no-restore
     - name: Run Unit Tests
-      run: dotnet test ../../Backend/Tests/FlagExplorerBackend.Tests/ --no-build
+      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests/ --no-build
     - name: Run Integration Tests
-      run: dotnet test ../../Backend/Tests/FlagExplorerBackend.Tests.Integration/ --no-build
+      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests.Integration/ --no-build
