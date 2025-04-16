@@ -20,9 +20,6 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-
-    - name: Install JUnit logger
-      run: dotnet add package JunitXml.TestLogger
         
     - name: Restore dependencies
       run: dotnet restore ./backend/FlagExplorerBackend.sln
@@ -31,14 +28,8 @@ jobs:
       run: dotnet build ./backend/FlagExplorerBackend.sln --no-restore
       
     - name: Run Unit Tests
-      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests/ --logger "junit;LogFilePath=test-results.xml"
+      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests/
       
     - name: Run Integration Tests
-      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests.Integration/ --logger "junit;LogFilePath=test-results.xml"
+      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests.Integration/
 
-    - name: Publish Test Report
-      uses: dorny/test-reporter@v1
-      with:
-        name: .NET Test Results
-        path: test-results.xml
-        reporter: java-junit
