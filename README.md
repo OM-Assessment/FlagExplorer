@@ -5,7 +5,7 @@
 ## Features
 
 - Endpoints for country data
-- Integration with [REST Countries API]
+- Integration with https://restcountries.com/v3.1/all
 - JSON serialization with custom converters 
 
 
