@@ -21,10 +21,10 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ../../Backend/FlagExplorerBackend
     - name: Build
       run: dotnet build --no-restore
     - name: Run Unit Tests
-      run: dotnet test .\Tests\FlagExplorerBackend.Tests\ --no-build
+      run: dotnet test ../../Backend/Tests/FlagExplorerBackend.Tests/ --no-build
     - name: Run Integration Tests
-      run: dotnet test .\Tests\FlagExplorerBackend.Tests.Integration\ --no-build
+      run: dotnet test ../..\Backend\Tests\FlagExplorerBackend.Tests.Integration/ --no-build
