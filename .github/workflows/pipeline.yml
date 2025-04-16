@@ -20,13 +20,10 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-
-    - name: Print working directory
-      run: pwd
     - name: Restore dependencies
-      run: dotnet restore ./backend/FlagExplorerBackend/
+      run: dotnet restore ./backend/FlagExplorerBackend.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build  ./backend/FlagExplorerBackend.sln --no-restore
     - name: Run Unit Tests
       run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests/ --no-build
     - name: Run Integration Tests
