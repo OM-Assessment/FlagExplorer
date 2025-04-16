@@ -28,7 +28,7 @@ jobs:
       run: dotnet build ./backend/FlagExplorerBackend.sln --no-restore
       
     - name: Run Unit Tests
-      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests/
+      run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests.Unit/
       
     - name: Run Integration Tests
       run: dotnet test ./backend/Tests/FlagExplorerBackend.Tests.Integration/
