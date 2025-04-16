@@ -1,1 +1,7 @@
 /backend/.vs
+/backend/FlagExplorerBackend/obj
+/backend/FlagExplorerBackend/bin
+/backend/Tests/FlagExplorerBackend.Tests.Integration/bin
+/backend/Tests/FlagExplorerBackend.Tests.Unit/bin
+/backend/Tests/FlagExplorerBackend.Tests.Unit/obj
+/backend/Tests/FlagExplorerBackend.Tests.Integration/obj
